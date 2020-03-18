@@ -12,11 +12,12 @@ window.geometry("400x400")
 
 def phrase_genrator():
     name = str(entry1.get())
-    phrases = ["Hey", "Hello", "Ssup", "Have a Nice Day"]
-    greeting = random.choice(phrases)+name
+    phrases = ["Hey", "Hello", "Ssup", "Have a Nice Day", "Adios"]
+    greeting = random.choice(phrases)+" "+name
     # ---text field
-    greeting_display = tk.Text(master=window, height=10, width=30)
-    greeting_display.grid(column=1, row=3)
+    greeting_display = tk.Text(
+        master=window, height=10, width=30, font=("Times New Roman", 15))
+    greeting_display.grid(column=1, row=6)
     greeting_display.insert(tk.END, greeting)
 
 # --labels----
@@ -26,16 +27,16 @@ label1 = tk.Label(text="welcome to greeter ")
 label1.grid(column=1, row=0)
 
 label1 = tk.Label(text="Enter your name: ")
-label1.grid(column=0, row=1)
+label1.grid(column=0, row=2)
 
 # --entries----
 
 entry1 = tk.Entry()
-entry1.grid(column=1, row=1)
+entry1.grid(column=1, row=2)
 
 # --button
 
 button1 = tk.Button(text="CLICK ME!", command=phrase_genrator)
-button1.grid(column=1, row=2)
+button1.grid(column=1, row=4)
 
 window.mainloop()
