@@ -19,4 +19,9 @@ label1.grid(column=0, row=1)
 entry1 = tk.Entry()
 entry1.grid(column=1, row=1)
 
+# --button
+
+button1 = tk.Button(text="CLICK ME!")
+button1.grid(column=1, row=2)
+
 window.mainloop()
